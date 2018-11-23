@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body {
+	font-family: sans-serif;
+}
+
+#button1 {
+		background-color: #eeeeee;
+		height: 40px;
+		width: 100px;
+		border: none;
+		border-radius: 3px;
+		position: absolute;
+		margin-top: 10px;
+		margin-left: 33px;
+		color: #757575;
+	}
+	
+	#button1:hover {
+		background-color: #e0e0e0;
+		transition: 0.3s ease-in-out;
+		color: black;
+	}
+
+</style>
+</head>
+<body>
+	<form action="../MonthlyReportServlet" method="post">
+		From Date:<input type="date" name="fdate"><br> To Date:<input
+			type="date" name="tdate"><br> <input id="button1" type="submit"
+			name="generate" value="Generate">
+	</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+create database rajkamal;
+
+create table adminLogin(userid int primary key auto_increment,username varchar(20),userpassword varchar(20));
+
+
+
+create table BusPassRequest(requestId int primary key auto_increment,EmployeeId varchar(10),
+firstname varchar(20),lastname varchar(20),gender varchar(6),address varchar(100),email varchar(100),
+dateofjoin date,location varchar(100),pickuploc varchar(20),pickuptime time,status varchar(10),Designation varchar(15));
+
+
+"insert into BusPassRequest(EmployeeId,firstname,lastname,gender,address,dateofjoin,location,pickuploc,pickuptime,status,email,designation)values(?,?,?,?,?,?,?,?,?,?,?,?)";
+
+
+create table route(route_id int primary key auto_increment,route_path varchar(225),  routename varchar(20) not null,occupiedseats 
+  int,total_seats int,bus_no varchar(10),driver_name varchar(20),total_km int); 
+
+  
+
+
+ 
+ 
+
+insert into route(route_path,routename,occupiedseats,total_seats,bus_no,driver_name,total_km)
+values('Chennai - MIPL, Paranur, Singaperumal Koil, Vandalur, Tambaram','MIPL - Tambaram',20,60,'TN-4463','Abdul',37);
+ 
+ 
+ 
+ create table transaction(transaction_id int,employeeId varchar(10),transaction_date date,calculated_km int,monthly_fare int,route_id int);

@@ -1,0 +1,84 @@
+<HTML>
+<head>
+<title>Login Page</title>
+<script type="text/javascript" src="scripts/Validation.js"></script>
+<style>
+body {
+	font-family: sans-serif;
+	color: #757575;
+}
+
+input {
+	background-color: #eeeeee;
+	border: none;
+	border-radius: 5px;
+	width: 250px;
+	height: 30px;
+}
+
+#formstyle {
+	margin-left: 95px;
+	margin-top: 100px;
+}
+
+#cover {
+	background-color: #f5f5f5;
+	width: 700px;
+	height: 200px;
+	border-radius: 5px;
+	margin-left: 340px;
+	margin-top: 100px;
+}
+
+#buttonstyle {
+	background-color: #eeeeee;
+	border: none;
+	border-radius: 3px;
+	color: #757575;
+}
+
+#buttonstyle:hover {
+	background-color: #e0e0e0;
+	transition: 0.3s ease-in-out;
+	color: black;
+}
+</style>
+</head>
+<body>
+	<div id="cover">
+		<form id="formstyle" name="f1" action="LoginServlet" method="post" onsubmit="return validate()">
+			<div id="body">
+				<table>
+					<tr>
+						<td></td>
+						<td><h3>Login Page</h3></td>
+					</tr>
+					<tr>
+						<td>User Name:</td>
+						<td><input type="text" name="userName"></td>
+						<td>
+							<div id="userErrMsg" class="errMsg"></div>
+						</td>
+					</tr>
+					<tr>
+						<td>Password:</td>
+						<td><input type="password" name="userPwd">
+						<td>
+							<div id="pwdErrMsg" class="errMsg"></div>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td style="text-align: center;"><input type="submit"
+							name="Login" value="Submit"></td>
+					</tr>
+				</table>
+			</div>
+			<p>
+				To Request For route please<a href="pages/BusPassRequest.html">Click
+					Here</a>
+			</p>
+		</form>
+	</div>
+</body>
+</HTML>
